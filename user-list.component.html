@@ -1,0 +1,19 @@
+<div class="container-fluid">
+<div class="heading"><h2>USERS</h2></div>
+<div class="sortby">SortBy
+    <select>
+        <option>select</option>
+        <option>FirstName</option>
+        <option>LastName</option>
+    </select>
+</div>
+   <div class="row">
+       <div class="col-md-4" *ngFor="let u of UserArray">
+        <a [routerLink]="['/userdetails',u.id]" ><div><img src="{{u.avatar}}" width="80px" height="80px" /></div>
+            <div>{{u.first_name}}</div>
+            <div>{{u.last_name}}</div></a>
+       </div>
+    </div>
+</div>
+
+
